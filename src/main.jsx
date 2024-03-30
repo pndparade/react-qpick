@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 import Root from './routes/Root'
 import Catalog from './routes/Catalog'
@@ -10,7 +10,7 @@ import ErrorPage from './routes/ErrorPage'
 
 import './index.sass'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,
