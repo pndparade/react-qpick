@@ -1,0 +1,80 @@
+.cart-item
+  position: relative
+  display: grid
+  row-gap: 20px
+  padding: 20px
+  background-color: #fff
+  border-radius: 30px
+  box-shadow: 0 0 20px rgba(0,0,0,0.1)
+
+  &__row
+    display: grid
+    grid-template-columns: 140px 1fr
+    align-items: center
+    row-gap: 20px
+    column-gap: 25px
+
+    @media screen and (width < 480px)
+      grid-template-columns: 100px 1fr
+      column-gap: 15px
+
+  &__imgbox
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 140px
+    height: 140px
+
+    @media screen and (width < 480px)
+      width: 100px
+      height: 100px
+
+  &__img
+    display: inline-block
+    max-width: 100%
+    max-height: 100%
+
+  &__name
+    font-size: 17px
+    font-weight: 500
+
+    @media screen and (width < 480px)
+      font-size: 15px
+
+  &__price
+    margin-top: 12px
+    font-size: 15px
+    font-weight: 600
+    color: var(--color-text-light)
+
+  &__counter
+    justify-self: center
+    
+  &__sum
+    justify-self: end
+    font-size: 15px
+    font-weight: 600
+
+  &__del
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 40px
+    height: 40px
+    appearance: none
+    border: none
+    color: var(--color-error)
+    background-color: transparent
+    cursor: pointer
+    transition: color 0.25s ease
+
+    @media screen and (width < 480px)
+      right: 10px
+      top: 10px
+
+    &:hover
+      color: var(--color-text)
+
+    .icon
+      width: 20px
+      height: 17px

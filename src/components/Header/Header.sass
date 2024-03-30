@@ -1,0 +1,56 @@
+.header
+
+  @media screen and (width < 1000px)
+    position: sticky
+    top: 0
+    background-color: var(--color-bg)
+    z-index: 1
+
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: var(--header-h)
+
+  &__logo
+    font-size: 25px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    color: var(--color-text)
+
+  &__nav
+    display: flex
+    height: 100%
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: var(--header-h)
+    color: var(--color-text-light)
+
+    &:hover
+      color: var(--color-text)
+
+  &__link-icon
+    position: relative
+
+    .icon
+      width: 24px
+      height: 24px
+
+  &__link-num
+    position: absolute
+    top: -8px
+    right: -8px
+    padding-inline: 4px
+    min-width: 18px
+    height: 18px
+    font-size: 15px
+    font-weight: 500
+    line-height: 18px
+    text-align: center
+    color: var(--color-white)
+    background-color: var(--color-accent)
+    border-radius: 18px

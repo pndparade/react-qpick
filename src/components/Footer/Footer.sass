@@ -1,0 +1,94 @@
+.footer
+
+  &__layout
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    padding: 30px
+    background-color: #fff
+    border-top-left-radius: 30px
+    border-top-right-radius: 30px
+    box-shadow: 0 0 20px rgba(0,0,0,0.1)
+
+    @media screen and (width < 768px)
+      grid-template-columns: repeat(2, 1fr)
+      row-gap: 20px
+
+    @media screen and (width < 480px)
+      grid-template-columns: 1fr
+
+  &__logo
+    font-size: 25px
+    font-weight: 700
+    text-transform: uppercase
+
+  &__nav
+    display: grid
+    align-content: space-between
+    row-gap: 20px
+
+  &__menu
+
+    a
+      font-size: 17px
+      color: var(--color-text)
+      text-decoration: none
+      border-bottom: 1px solid transparent
+
+      &:hover
+        border-bottom: 1px solid var(--color-text)
+
+  &__menu
+    margin: 0
+    padding: 0
+    list-style: none
+
+    li:not(:last-child)
+      margin-bottom: 10px
+
+  &__lang
+    display: flex
+    gap: 20px
+    padding-left: 40px
+    background: url("./assets/images/lang.svg") no-repeat
+
+  &__lang-link
+    font-size: 15px
+    font-weight: 500
+    color: var(--color-text)
+    text-decoration: none
+
+    &:hover
+      color: var(--color-text-light)
+
+    &.is-active
+      font-weight: 700
+      color: var(--color-accent)
+      pointer-events: none
+
+  &__soc
+    justify-self: end
+    align-self: start
+    display: flex
+    align-items: center
+    gap: 15px
+
+    @media screen and (width < 768px)
+      justify-self: initial
+      align-self: end
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+      margin-bottom: -10px
+
+    @media screen and (width < 480px)
+      grid-column: initial
+      grid-row: initial
+
+  &__soc-link
+    color: var(--color-text)
+
+    &:hover
+      color: var(--color-accent)
+
+    .icon
+      width: 32px
+      height: 32px
